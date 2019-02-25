@@ -23,12 +23,9 @@ tags: $(sources)
 $(jarfile): $(classes) $(assets)
 	jar cfe $@ $(main) $(classes) $(innerclasses) $(assets)
 
-manifest:
-	echo "Main-class: $(main)" > manifest
-
 .PHONY: clean
 clean:
-	rm -f manifest *.class $(jarfile) tags *.orig
+	rm -f *.class $(jarfile) tags *.orig
 
 .PHONY: mostlyclean
 mostlyclean:
