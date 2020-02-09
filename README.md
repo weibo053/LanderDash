@@ -3,5 +3,5 @@ use the following commands to compile and run the program
 ```
 $ make clean
 $ make 
-$ java -jar LunarLander.jar
+$ java -jar LanderDash.jar
 ```
