@@ -25,9 +25,11 @@ public class DatagramPanel extends JPanel {
         setBorder(BorderFactory.createTitledBorder("Socket Address"));
         add(new JLabel("IP:"));
         addressname = new JTextField(10);
+        addressname.setEditable(false);
         add(addressname);
         add(new JLabel("port:"));
         port = new JTextField(5);
+        port.setEditable(false);
         add(port);
     }
 

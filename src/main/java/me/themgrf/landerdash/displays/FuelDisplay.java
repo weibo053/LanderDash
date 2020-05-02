@@ -36,6 +36,7 @@ public class FuelDisplay extends JPanel {
         gc.weightx = 0.1;
         quantity = new JTextField(5);
         quantity.setHorizontalAlignment(JTextField.TRAILING);
+        quantity.setEditable(false);
         add(quantity, gc);
 
         gc.gridx = 0;

@@ -40,6 +40,7 @@ public class AltitudeDisplay extends JPanel {
         gc.gridx = GridBagConstraints.RELATIVE;
         quantity = new JTextField(5);
         quantity.setHorizontalAlignment(JTextField.TRAILING);
+        quantity.setEditable(false);
         add(quantity, gc);
 
         warninglight = new JLabel("Proximity ", Icons.OFF, SwingConstants.LEADING);
@@ -71,9 +72,18 @@ public class AltitudeDisplay extends JPanel {
      * @param alt The current altitude of the rocket
      */
     public void setAltitude(float alt) {
-        gauge.setValue((int) alt);
+        if (alt < -1) return;
+        gauge.setValue((int) alt / 5);
         quantity.setText(Float.toString(alt));
         warninglight.setIcon((alt > proximity) ? Icons.OFF : Icons.WARNING);
         contactlight.setIcon((alt > 1) ? Icons.OFF : Icons.CONTACT);
+    }
+
+    /**
+     * Get the current altitude of the rocket from the gauge
+     * @return The current altitude of the rocket
+     */
+    public int getAltitude() {
+        return gauge.getValue();
     }
 }

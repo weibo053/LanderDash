@@ -83,6 +83,7 @@ public class LanderDash extends JFrame implements Runnable {
                         String[] pair = l.split(":");
                         switch (pair[0]) {
                             case "fuel":
+                                if (alt.getAltitude() > 0)
                                 fuelpc.setFuel(Float.parseFloat(pair[1]));
                                 break;
                             case "altitude":
