@@ -22,7 +22,7 @@ public class FuelDisplay extends JPanel {
      */
     public FuelDisplay() {
         setLayout(new GridBagLayout());
-        setBorder(BorderFactory.createTitledBorder("fuel"));
+        setBorder(BorderFactory.createTitledBorder("Fuel"));
         GridBagConstraints gc = new GridBagConstraints();
 
         gc.gridx = gc.gridy = 0;
@@ -30,7 +30,7 @@ public class FuelDisplay extends JPanel {
         gc.fill = GridBagConstraints.HORIZONTAL;
         gc.weightx = 1.0;
         gc.weighty = 0.1;
-        add(new JLabel("fuel remaining:", SwingConstants.TRAILING), gc);
+        add(new JLabel("Fuel Remaining:", SwingConstants.TRAILING), gc);
 
         gc.gridx = GridBagConstraints.RELATIVE;
         gc.weightx = 0.1;
