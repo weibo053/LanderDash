@@ -1,7 +1,6 @@
 # LanderDash
-use the following commands to compile and run the program
+Use the following commands to compile and run the program.
 ```
-$ make clean
-$ make 
-$ java -jar LanderDash.jar
+$ mvn clean package
+$ java -jar target/LanderDash.jar 
 ```
